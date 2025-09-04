@@ -1,98 +1,91 @@
-# Backend Interview Challenge - Task Sync API
+Perfect 👍 If you’re writing your own `README.md`, here’s the **basic structure you should follow** (you can add/remove points depending on what you want to highlight):
 
-This is a backend developer interview challenge focused on building a sync-enabled task management API. The challenge evaluates understanding of REST APIs, data synchronization, offline-first architecture, and conflict resolution.
+---
 
-## 📚 Documentation Overview
+# 📌 Backend Challenge Solution
 
-Please read these documents in order:
+## 🚀 Live API
 
-1. **[📋 Submission Instructions](./docs/SUBMISSION_INSTRUCTIONS.md)** - How to submit your solution (MUST READ)
-2. **[📝 Requirements](./docs/REQUIREMENTS.md)** - Detailed challenge requirements and implementation tasks
-3. **[🔌 API Specification](./docs/API_SPEC.md)** - Complete API documentation with examples
-4. **[🤖 AI Usage Guidelines](./docs/AI_GUIDELINES.md)** - Guidelines for using AI tools during the challenge
+* Base URL: `https://backend-challenge-solution.onrender.com`
 
-**⚠️ Important**: DO NOT create pull requests against this repository. All submissions must be through private forks.
+## 📖 API Endpoints
 
-## Challenge Overview
+### ➤ Get all tasks
 
-Candidates are expected to implement a backend API that:
-- Manages tasks (CRUD operations)
-- Supports offline functionality with a sync queue
-- Handles conflict resolution when syncing
-- Provides robust error handling
-
-## Project Structure
-
-```
-backend-interview-challenge/
-├── src/
-│   ├── db/             # Database setup and configuration
-│   ├── models/         # Data models (if needed)
-│   ├── services/       # Business logic (TO BE IMPLEMENTED)
-│   ├── routes/         # API endpoints (TO BE IMPLEMENTED)
-│   ├── middleware/     # Express middleware
-│   ├── types/          # TypeScript interfaces
-│   └── server.ts       # Express server setup
-├── tests/              # Test files
-├── docs/               # Documentation
-└── package.json        # Dependencies and scripts
+```http
+GET /api/tasks
 ```
 
-## Getting Started
+### ➤ Create a task
 
-### Prerequisites
-- Node.js (v18 or higher)
-- npm or yarn
+```http
+POST /api/tasks
+Content-Type: application/json
 
-### Setup
-1. Clone the repository
+{
+  "title": "Finish Assignment",
+  "description": "Complete PearlThoughts backend challenge"
+}
+```
+
+### ➤ Update a task
+
+```http
+PUT /api/tasks/:id
+Content-Type: application/json
+
+{
+  "title": "Updated Task",
+  "description": "Now completed",
+  "completed": true
+}
+```
+
+### ➤ Delete a task
+
+```http
+DELETE /api/tasks/:id
+```
+
+---
+
+## 🛠 How to Run Locally
+
+1. Clone repo:
+
+   ```sh
+   git clone https://github.com/dileepkumarkella123/backend-challenge-solution.git
+   cd backend-challenge-solution
+   ```
 2. Install dependencies:
-   ```bash
+
+   ```sh
    npm install
    ```
-3. Copy environment variables:
-   ```bash
-   cp .env.example .env
-   ```
-4. Run the development server:
-   ```bash
+3. Start server:
+
+   ```sh
    npm run dev
    ```
+4. API runs at:
 
-### Available Scripts
+   ```
+   http://localhost:3000
+   ```
 
-- `npm run dev` - Start development server with hot reload
-- `npm run build` - Build TypeScript to JavaScript
-- `npm run start` - Start production server
-- `npm test` - Run tests
-- `npm run test:ui` - Run tests with UI
-- `npm run lint` - Run ESLint
-- `npm run typecheck` - Check TypeScript types
+---
 
-## Your Task
+## 📹 Screencast (Demo Video)
 
-### Key Implementation Files
+(Add your Loom / YouTube / Drive link here after recording)
 
-You'll need to implement the following services and routes:
+---
 
-- `src/services/taskService.ts` - Task CRUD operations
-- `src/services/syncService.ts` - Sync logic and conflict resolution  
-- `src/routes/tasks.ts` - REST API endpoints
-- `src/routes/sync.ts` - Sync-related endpoints
+## ✅ Features
 
-### Before Submission
+* Create, Read, Update, Delete (CRUD) tasks
+* RESTful API design
+* Deployed on **Render**
+* Written in **TypeScript + Express.js**
 
-Ensure all of these pass:
-```bash
-npm test          # All tests must pass
-npm run lint      # No linting errors
-npm run typecheck # No TypeScript errors
-```
-
-### Time Expectation
-
-This challenge is designed to take 2-3 hours to complete.
-
-## License
-
-This project is for interview purposes only.
+---
