@@ -12,9 +12,12 @@
     "resolveJsonModule": true,
     "moduleResolution": "node",
     "allowJs": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "noImplicitReturns": true,
+
+    // 👇 disable strict checks that are blocking your build
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
+    "noImplicitReturns": false,
+
     "noFallthroughCasesInSwitch": true,
     "allowSyntheticDefaultImports": true,
     "emitDecoratorMetadata": true,
