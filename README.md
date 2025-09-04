@@ -6,7 +6,7 @@ Perfect 👍 If you’re writing your own `README.md`, here’s the **basic stru
 
 ## 🚀 Live API
 
-* Base URL: `https://backend-challenge-solution.onrender.com`
+* Base URL: `https://backend-challenge-solution.onrender.com/api/tasks`
 
 ## 📖 API Endpoints
 
